@@ -18,7 +18,7 @@ int main()
 		{
 			for(int j=0;j<n;j++)
 			{
-				if(arr[j]<arr[i])
+				if(arr[j]>arr[i])
 				{
 					int temp;
 					temp = arr[i];
@@ -34,6 +34,7 @@ int main()
 			bool flag = 0;
 			while(start<=end)
 			{
+				mid = start + (end-start)/2;
 				if(arr[mid]==k)
 				{
 					cout<<"element present in  the array";
@@ -46,7 +47,7 @@ int main()
 				end = mid -1;
 				else
 				start = mid +1;
-				mid = (start+end)/2;
+			//	mid = (start+end)/2;
 				
 			}
 			if(flag==0)
